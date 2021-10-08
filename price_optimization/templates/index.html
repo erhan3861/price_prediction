@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Price Prediction</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      
+      <p>Price Class:</p>
+      <input type="text" name="price_class">
+      <br>
+
+      <p>Shipping:</p>
+      <input type="text" name="shipping">
+      <br>
+
+      <p>Rating point:</p>
+      <input type="text" name="rating_point">
+      <br>
+
+      <p>Rating Number:</p>
+      <input type="text" name="rating_number">
+      <br>
+
+      <p>Seller Point:</p>
+      <input type="text" name="seller_point">
+      <br>
+      <br>
+      <br>
+      
+      <input type="submit" value='Get Predictions'>
+    </form>
+  </body>
+</html>
